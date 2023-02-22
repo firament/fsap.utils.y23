@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sak.utils.FileSlicer", "sak.utils.FileSlicer\sak.utils.FileSlicer.csproj", "{4CCC5155-49A1-4347-A029-E2E733681CD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sak.utils.FileSlicer", "sak.utils.FileSlicer\sak.utils.FileSlicer.csproj", "{4CCC5155-49A1-4347-A029-E2E733681CD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdlineTrail2302", "CmdlineTrail2302\CmdlineTrail2302.csproj", "{A3D573A1-965C-417C-A306-4867C4C8A973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CmdlineTrail2302", "CmdlineTrail2302\CmdlineTrail2302.csproj", "{A3D573A1-965C-417C-A306-4867C4C8A973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sak.utils.FileDedup", "FileDedup\sak.utils.FileDedup.csproj", "{46054A86-8856-43B0-880F-214340C0BAAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "y23.doorway", "y23.doorway\y23.doorway.csproj", "{AB5307AD-B051-4768-9953-FD8BAB086466}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{A3D573A1-965C-417C-A306-4867C4C8A973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3D573A1-965C-417C-A306-4867C4C8A973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3D573A1-965C-417C-A306-4867C4C8A973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46054A86-8856-43B0-880F-214340C0BAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46054A86-8856-43B0-880F-214340C0BAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46054A86-8856-43B0-880F-214340C0BAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46054A86-8856-43B0-880F-214340C0BAAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5307AD-B051-4768-9953-FD8BAB086466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5307AD-B051-4768-9953-FD8BAB086466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5307AD-B051-4768-9953-FD8BAB086466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5307AD-B051-4768-9953-FD8BAB086466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileDedup\sak.utils.FileDedup.csproj" />
+    <ProjectReference Include="..\sak.utils.FileSlicer\sak.utils.FileSlicer.csproj" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="ECHO Using Configuration '$(Configuration)' for '$(AssemblyName)'" />
+  </Target>
+
+</Project>

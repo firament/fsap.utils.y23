@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog-Release.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog-Debug.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="echo Using Configuration '$(Configuration)'&#xD;&#xA;echo ProjectDir: $(ProjectDir)&#xD;&#xA;echo OutDir: $(OutDir)&#xD;&#xA;REM DIR $(OutDir)NLog*.config&#xD;&#xA;REM COPY $(ProjectDir)NLog-$(Configuration).config $(ProjectDir)$(OutDir)NLog.config" />
+  </Target>
+
+</Project>

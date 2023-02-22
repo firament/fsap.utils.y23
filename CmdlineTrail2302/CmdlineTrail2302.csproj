@@ -11,4 +11,8 @@
     <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="ECHO Using Configuration '$(Configuration)' for '$(AssemblyName)'" />
+  </Target>
+
 </Project>
