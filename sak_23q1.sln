@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sak.utils.FileSlicer", "sak.utils.FileSlicer\sak.utils.FileSlicer.csproj", "{4CCC5155-49A1-4347-A029-E2E733681CD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdlineTrail2302", "CmdlineTrail2302\CmdlineTrail2302.csproj", "{A3D573A1-965C-417C-A306-4867C4C8A973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CCC5155-49A1-4347-A029-E2E733681CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CCC5155-49A1-4347-A029-E2E733681CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CCC5155-49A1-4347-A029-E2E733681CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CCC5155-49A1-4347-A029-E2E733681CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D573A1-965C-417C-A306-4867C4C8A973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D573A1-965C-417C-A306-4867C4C8A973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D573A1-965C-417C-A306-4867C4C8A973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D573A1-965C-417C-A306-4867C4C8A973}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2D0F8BD-DAEF-4D7A-B698-13F9AB68A8E1}
+	EndGlobalSection
+EndGlobal
