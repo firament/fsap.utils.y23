@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sak.utils.FileSlicer", "sak
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CmdlineTrail2302", "CmdlineTrail2302\CmdlineTrail2302.csproj", "{A3D573A1-965C-417C-A306-4867C4C8A973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sak.utils.FileDedup", "FileDedup\sak.utils.FileDedup.csproj", "{46054A86-8856-43B0-880F-214340C0BAAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sak.utils.FileDedup", "FileDedup\sak.utils.FileDedup.csproj", "{46054A86-8856-43B0-880F-214340C0BAAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "y23.doorway", "y23.doorway\y23.doorway.csproj", "{AB5307AD-B051-4768-9953-FD8BAB086466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "y23.doorway", "y23.doorway\y23.doorway.csproj", "{AB5307AD-B051-4768-9953-FD8BAB086466}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F0CED584-B3F1-44CF-9108-F8CDCC4EE337}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

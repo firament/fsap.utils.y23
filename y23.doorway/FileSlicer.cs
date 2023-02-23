@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using sak.utils.FileSlicer;
+﻿using sak.utils.FileSlicer;
 
 namespace y23.doorway
 {
@@ -16,7 +11,7 @@ namespace y23.doorway
 
         private void RunHello()
         {
-            FileSlicerUtils fsu= new FileSlicerUtils();
+            FileSlicerUtils fsu = new FileSlicerUtils();
             fsu.Hello();
         }
     }

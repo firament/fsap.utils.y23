@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3-beta1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FileDedup\sak.utils.FileDedup.csproj" />
     <ProjectReference Include="..\sak.utils.FileSlicer\sak.utils.FileSlicer.csproj" />
   </ItemGroup>
@@ -15,5 +19,13 @@
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="ECHO Using Configuration '$(Configuration)' for '$(AssemblyName)'" />
   </Target>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\sak_23q1\y23.doorway\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\sak_23q1\y23.doorway\.editorconfig" />
+  </ItemGroup>
 
 </Project>

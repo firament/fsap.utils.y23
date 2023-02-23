@@ -12,7 +12,7 @@
 
         private static void FileSlicerTasks()
         {
-            FileSlicer fs= new FileSlicer();
+            FileSlicer fs = new FileSlicer();
             fs.RunTasks();
         }
     }

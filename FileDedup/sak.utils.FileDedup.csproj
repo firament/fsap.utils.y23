@@ -10,4 +10,10 @@
     <Exec Command="ECHO Using Configuration '$(Configuration)' for '$(AssemblyName)'" />
   </Target>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3-beta1" />
+    <PackageReference Include="NLog" Version="5.1.2" />
+  </ItemGroup>
+
 </Project>

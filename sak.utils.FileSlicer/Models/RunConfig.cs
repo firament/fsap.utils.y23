@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace sak.utils.FileSlicer.Models
+﻿namespace sak.utils.FileSlicer.Models
 {
     /// <summary>
     /// 
@@ -51,12 +44,23 @@ namespace sak.utils.FileSlicer.Models
 
     public class RunConfig : IRunConfig
     {
-        public string ID { get; set; } = Guid.NewGuid().ToString();
-        public string Version { get; set; } = "0.1";
-        public string InputPath { get; set; } = string.Empty;
-        public string OutputPath { get; set; } = String.Empty;
-        public int SliceLineCount { get; set; } = 100;
-        public int HeaderLineCount { get; set; } = 10;
-        public bool SingleFileOutput { get; set; } = false;
+        public RunConfig()
+        {
+            ID = Guid.NewGuid().ToString();
+            Version = "0.1";
+            InputPath = String.Empty;
+            OutputPath = String.Empty;
+            SliceLineCount = 100;
+            HeaderLineCount = 1;
+            SingleFileOutput = false;
+        }
+
+        public string ID { get; set; }
+        public string Version { get; set; }
+        public string InputPath { get; set; }
+        public string OutputPath { get; set; }
+        public int SliceLineCount { get; set; }
+        public int HeaderLineCount { get; set; }
+        public bool SingleFileOutput { get; set; }
     }
 }
