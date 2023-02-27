@@ -29,7 +29,7 @@ namespace sak.utils.FileDedup.Models
         HashTypeEnum UseHash { get; set; }
     }
 
-    public interface IDedupReport: IInternalReport
+    public interface IDedupReport<T> : IPayload<T>
     {
         string RunID { get; set; }
         DateTimeOffset RunDate { get; set; }
@@ -46,6 +46,11 @@ namespace sak.utils.FileDedup.Models
         List<string> Entries { get; set; }
     }
 
+    public interface IPayload<T> : IInternalReport
+    {
+        List<T> Payload { get; set; }
+    }
+
     #endregion INTERFACES
 
 
@@ -53,7 +58,7 @@ namespace sak.utils.FileDedup.Models
 
     public class FileEntry : IFileEntry
     {
-        public long ID { get; set; }           // DateTimeOffset.UtcNow..UtcTicks
+        public long ID { get; set; } = DateTimeOffset.UtcNow.UtcTicks;
         public string Name { get; set; } = string.Empty;
         public HashTypeEnum Hash_Type { get; set; }
         public TimeSpan Hash_Time { get; set; } // TimeSpan.TotalMilliseconds
@@ -75,7 +80,7 @@ namespace sak.utils.FileDedup.Models
 
     }
 
-    public class DedupReport : IDedupReport
+    public class DedupReport<T> : IDedupReport<T>
     {
         public DedupReport()
         {
@@ -85,6 +90,7 @@ namespace sak.utils.FileDedup.Models
             Message = string.Empty;
             RunConfig = null;
             Entries = new List<string>();
+            Payload = new List<T>();
         }
         public string RunID { get; set; }
         public DateTimeOffset RunDate { get; set; }
@@ -92,6 +98,7 @@ namespace sak.utils.FileDedup.Models
         public string Message { get; set; }
         public IRunConfig? RunConfig { get; set; }
         public List<string> Entries { get; set; }
+        public List<T> Payload { get; set; }
 
     }
 
@@ -108,6 +115,20 @@ namespace sak.utils.FileDedup.Models
         public List<string> Entries { get; set; }
     }
 
+    public class InternalPayload<T> : IPayload<T>
+    {
+        public InternalPayload()
+        {
+            Result = ResultEnum.NOT_SET;
+            Message = string.Empty;
+            Entries = new List<string>();
+            Payload = new List<T>();
+        }
+        public string Message { get; set; }
+        public ResultEnum Result { get; set; }
+        public List<string> Entries { get; set; }
+        public List<T> Payload { get; set; }
+    }
 
     #endregion // CLASSES
 }

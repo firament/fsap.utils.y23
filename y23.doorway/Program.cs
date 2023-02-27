@@ -5,7 +5,11 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            FileSlicerTasks();
+
+            //FileSlicerTasks();
+
+            FileDedupTasks();
+
             Console.WriteLine("Bye, World!");
 
         }
@@ -14,6 +18,13 @@
         {
             FileSlicer fs = new FileSlicer();
             fs.RunTasks();
+        }
+        private static void FileDedupTasks()
+        {
+            using (FileDedup fd = new FileDedup())
+            {
+                fd.RunTasks();
+            };
         }
     }
 }

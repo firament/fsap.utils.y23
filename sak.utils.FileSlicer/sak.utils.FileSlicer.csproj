@@ -13,12 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="NLog-Release.config">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="NLog-Debug.config">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
     <None Update="NLog.config">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
@@ -33,7 +27,7 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="ECHO Copying file $(ProjectDir)NLog-$(Configuration).config to $(ProjectDir)$(OutDir)NLog.config&#xD;&#xA;COPY $(ProjectDir)NLog-$(Configuration).config $(ProjectDir)$(OutDir)NLog.config" />
+    <Exec Command="ECHO Copying file $(ProjectDir)NLog-$(Configuration).config to $(ProjectDir)$(OutDir)NLog.config&#xD;&#xA;REM COPY $(ProjectDir)NLog-$(Configuration).config $(ProjectDir)$(OutDir)NLog.config" />
   </Target>
 
 </Project>

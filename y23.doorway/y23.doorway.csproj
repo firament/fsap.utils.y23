@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -27,5 +27,15 @@
   <ItemGroup>
     <None Include="D:\sak_23q1\y23.doorway\.editorconfig" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog-Debug.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="ECHO Copying file $(ProjectDir)NLog-$(Configuration).config to $(ProjectDir)$(OutDir)NLog.config&#xD;&#xA;COPY $(ProjectDir)NLog-$(Configuration).config $(ProjectDir)$(OutDir)NLog.config" />
+  </Target>
 
 </Project>

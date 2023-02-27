@@ -26,6 +26,7 @@ namespace sak.utils.FileDedup.Support
 {
     public static class RunConfigSupport
     {
+        private readonly static string DSC = Path.DirectorySeparatorChar.ToString();
         private static JsonSerializerSettings js_out = new JsonSerializerSettings()
         {
             Formatting = Formatting.Indented,
@@ -48,10 +49,10 @@ namespace sak.utils.FileDedup.Support
                     "E:/Decernis/UK9-Pulls/StripMasters"           // small number for debug.
                     //"E:/Decernis/UK9-Pulls/extract_all_210823-0821" // large number of files
                 },
-                Out_Path = Path.Combine( 
-                    Environment.CurrentDirectory, 
-                    "../../../", 
-                    DDConstants.GC_OUTPUT_PATH_SEGMENT, 
+                Out_Path = Path.Combine(
+                    Environment.CurrentDirectory,
+                    $"..{DSC}..{DSC}..{DSC}",
+                    DDConstants.GC_OUTPUT_PATH_SEGMENT,
                     dt.ToString(DDConstants.GC_OUTPUT_PATH_PATTERN)
                     ),
                 UseHash = HashTypeEnum.SHA256,
